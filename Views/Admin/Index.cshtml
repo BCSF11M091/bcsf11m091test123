@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Admin";
+}
+ <hr class="soften">
+ <div class="accordion-group">
+<div class="accordion-heading">
+<h2 class="accordion-toggle collapsed">Products: <a  href="@Url.Content("~/Catagery/Products")">Show Details</a> </h2>
+<h2  class="accordion-toggle" >All User Info: <a href="@Url.Content("~/Admin/Users")">Show Details</a></h2>
+	
+     <form class="col-md-4" method="post" action="/Account/validatelogin">
+        <div class="form-group">
+         <p class="form-control input-lg">   @Html.TextBoxFor(x=>x.UserName)</p>
+           
+        </div>
+        <div class="form-group">
+         <p class="form-control input-lg">   @Html.TextBoxFor(x=>x.Password)</p>
+       <!-- <input type="password" class="form-control input-lg" placeholder="Password" name="password">
+           
+            <input type="text" name="username">
+           -->
+    </div>
+             
+                  </div>
+                    </div>

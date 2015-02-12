@@ -1,0 +1,46 @@
+﻿@model List<TP2.Models.PersonalInfo>
+
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="panel panel-green">
+   
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Country</th>
+                <th>Phone Number</th>
+                <th>Password</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach(var s in Model)
+            {
+                <tr>
+                    <td>@s.fName</td>
+                    <td>@s.lName</td>
+                    <td>@s.Country</td>
+                    <td>@s.Phone</td>
+                    <td>@s.Password</td>
+                    <td>@s.Email</td>
+                    <td>@s.Address</td>>
+                                        
+                    <td><span class="label label-sm label-info"><a href="/Admin/EditUser/@s.Id">Edit</a></span></td>
+                                            
+                    <td><span class="label label-sm label-danger"><a href="/Admin/DeleteUser/@s.Id">Delete</a></span></td>
+                </tr>
+            }
+            </tbody>
+        </table>
+       
+                            </div>
+                     
+

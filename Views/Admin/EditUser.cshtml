@@ -1,0 +1,88 @@
+﻿
+@model TP2.Models.PersonalInfo
+
+
+	<div class="span9">
+    <ul class="breadcrumb">
+		<li><a href="index.html">Home</a> <span class="divider">/</span></li>
+		<li class="active">Registration</li>
+    </ul>
+
+	<h3> Registration</h3>	
+	<hr class="soft"/>
+
+	<div class="well">
+	
+
+	<form class="form-horizontal" method="post" action="/Admin/EditUser2" >
+
+	
+		<div class="control-group">
+			<label class="control-label" for="inputFname">First name <sup>*</sup></label>
+			<div class="controls">
+			<div class="editor-field">@Html.TextBoxFor(z => z.fName, new {value = @Model.fName });</div>
+			</div>
+		 </div>
+
+		<div class="control-group">
+			<label class="control-label" for="inputLname">Last name <sup>*</sup></label>
+			<div class="controls">
+			 <div class="editor-field">@Html.TextBoxFor(u => u.lName)</div>
+			</div>
+		 </div>
+
+		<div class="control-group">
+		<label class="control-label" for="inputEmail">Email <sup>*</sup></label>
+		<div class="controls">
+		 <div class="editor-field">@Html.TextBoxFor(u => u.Email,new { placeholder = "Email" })</div>
+		</div>
+	  </div>
+        
+	    <div class="control-group">
+		    <label class="control-label" for="inputPassword">Password <sup>*</sup></label>
+		    <div class="controls">
+		      <div class="editor-field">@Html.TextBoxFor(u => u.Password,new { placeholder = "Password" })</div>
+		    </div>
+	      </div>	
+		
+		<div class="control-group">
+			<label class="control-label" for="adress">Address<sup>*</sup></label>
+			<div class="controls">
+			  <div class="editor-field">@Html.TextBoxFor(u => u.Address,new { placeholder = "Address" })</div>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="country">Country<sup>*</sup></label>
+			<div class="controls">
+			  <div class="editor-field">@Html.TextBoxFor(u => u.Country,new { placeholder = "Country" })</div>
+			</div>
+		</div>	
+		
+		<div class="control-group">
+			<label class="control-label" for="mobile">Mobile Phone </label>
+			<div class="controls">
+             <div class="editor-field">@Html.TextBoxFor(u => u.Phone,new { placeholder = "Phone" })</div>
+			 
+			</div>
+		</div>
+		
+	    
+	    <div class="control-group">
+			<div class="controls">
+				
+				<input class="btn btn-large" type="submit" id="displayinmodal" value="Update" />
+			</div>
+		</div>	
+        
+        
+        	
+	</form>
+
+
+       
+
+</div>
+
+</div>
+

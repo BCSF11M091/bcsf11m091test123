@@ -1,0 +1,16 @@
+﻿@model TP2.Models.Product
+@{
+    ViewBag.Title = "EditProduct";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>EditProduct</h2>
+<h2>Add Products Details</h2>
+<form method="post" action="/Catagery/EditProduct1">
+<p>@Html.TextBoxFor(x => x.Name, new {placeholder = "Name"})</p>
+<p>@Html.TextBoxFor(x => x.Price, new { placeholder = "Price" })</p>
+<p>@Html.TextBoxFor(x => x.Description, new  {placeholder = "Description" })</p>
+<p>@Html.TextBoxFor(x => x.Brand, new { placeholder = "Brand"})</p>
+    <p hidden>@Html.TextBoxFor(x=>x.Id)</p>
+    <button>Add Product</button>
+    </form>

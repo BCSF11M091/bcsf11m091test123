@@ -1,0 +1,47 @@
+﻿@model List<TP2.Models.Product>
+
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="panel panel-green">
+    <div class="panel-heading">Products<a href="/product/addProd/">
+        <input type="button" class="btn btn-primary" value="Add"/></a></div>
+    <div class="panel-body">
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Unit Price</th>
+                <th>Stock</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach(var prod in Model)
+            {
+                <tr>
+                    <td>@prod.Id</td>
+                    <td>@prod.Name</td>
+                    <td>@prod.Price</td>
+                    <td>@prod.Brand</td>
+                                        
+                    <td><span class="label label-sm label-info"><a href="/Catagery/EditProduct/@prod.Id">Edit</a></span></td>
+                                            
+                    <td><span class="label label-sm label-danger"><a href="/Catagery/DeleteProduct/@prod.Id">Delete</a></span></td>
+                </tr>
+            }
+            </tbody>
+        </table>
+        <form method="post" action="/Catagery/AddProducts">
+    <button value="Add New Product">Add New Product</button>
+
+</form>
+                            </div>
+                        </div>
+
+
+
